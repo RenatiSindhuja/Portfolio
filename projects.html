@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Sindhuja</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+            color: #222;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: #003566;
+            color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin: 10px 0 0;
+        }
+
+        nav {
+            margin-top: 20px;
+        }
+        nav a {
+            text-decoration: none;
+            margin: 0 15px;
+            color: #f0f8ff;
+            font-weight: bold;
+            font-size: 1.1rem;
+            position: relative;
+            padding: 10px 20px;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            background: linear-gradient(135deg, #003566, #00509e);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        nav a:hover {
+            color: #ffd700;
+            background: linear-gradient(135deg, #00509e, #003566);
+            transform: scale(1.1);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+        }
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            width: 0;
+            height: 3px;
+            background: #ffd700;
+            transition: width 0.3s ease, left 0.3s ease;
+        }
+        nav a:hover::after {
+            width: 100%;
+            left: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            font-size: 2rem;
+            color: #003566;
+            margin-bottom: 15px;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .project-card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .project-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .project-card p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: #003566;
+            color: #fff;
+        }
+        .project-card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            background-color: #f5f7f8; /* Light blue shade */
+        }
+        
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .container {
+                padding: 15px;
+            }
+
+            nav a {
+                font-size: 1rem;
+                margin: 0 10px;
+            }
+
+            .section h2 {
+                font-size: 1.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                padding: 30px 15px;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Projects</h1>
+        <p>Creative Developer | Video Editor | Biotech Enthusiast</p>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section id="projects" class="section">
+            <h2>My Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Youtube Content Creation</h3>
+                    <p>
+                        Designed and edited engaging health-related informational videos with seamless transitions and
+                        visually appealing elements. Each video is crafted to captivate viewers while effectively
+                        delivering valuable health insights. Explore my creative work by visiting my YouTube channel,
+                        <b>SR FitHealth</b>, through the link below. I hope you find the content inspiring and
+                        informative!
+                    </p>
+                    <a href="https://www.youtube.com/@SRFitHealth" target="_blank">View Channel</a>
+                </div>
+                <div class="project-card">
+                    <h3>Freelance and Application Projects</h3>
+                    <p>These videos were created as part of my freelancing projects and job application process.</p>
+                    <a href="https://drive.google.com/drive/folders/11ZjTQDaWQWBtlsgce2HOcZt1g54_mv-Z?usp=sharing" target="_blank">Watch Project edits</a>
+                </div>
+                <div class="project-card">
+                    <h3>Video Editing Certifications</h3>
+                    <p> Certified and Completed related projects in Different Video Editing skills like Filmora, Davinchi Resolve.... through Udemy.
+                    </p>
+                    <a href="https://drive.google.com/drive/folders/1YZlqq6fnGCBQrcrG4g2hwiL3yREo7uZ4?usp=sharing" target="_blank">View Certifications</a>
+                </div>
+                <div class="project-card">
+                    <h3>Evaluation of Protein Antigen Recovery at Different Stages During the Manufacturing Process</h3>
+                    <p>Conducted a detailed analysis of protein antigen recovery using biochemical methods like Lime's Flocculation and Lowry Assay, contributing to optimizing the manufacturing process at Sanofi Healthcare India Private Limited.</p>
+                    <a href="/Documents/Project Certificate.pdf" target="_blank">View Certification</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <button id="moveToTop">Move to Top</button>
+    </footer>
+    
+    <script>
+        // JavaScript for smooth scroll to top
+        document.getElementById('moveToTop').addEventListener('click', function () {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+    
+    <style>
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: #003566;
+            color: #fff;
+            position: relative;
+        }
+    
+        #moveToTop {
+            background-color: #ffd700; /* Gold color */
+            color: #003566;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-bottom: 10px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+    
+        #moveToTop:hover {
+            background-color: #003566;
+            color: #ffd700;
+        }
+    </style>
+</body>
+
+</html>

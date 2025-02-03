@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sindhuja's Portfolio</title>
+    <style>
+        /* General body styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+            color: #222;
+            overflow-x: hidden;
+        }
+
+        /* Header styling */
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            background: #003566;
+            color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 2;  /* Ensure header is above background */
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3rem;
+            animation: slideInLeft 2s ease-in-out;
+        }
+
+        header p {
+            font-size: 1.3rem;
+            margin: 10px 0 0;
+            animation: fadeInUp 2s ease-in-out;
+        }
+
+        /* Header background spin animation (separate from buttons) */
+        header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 20%, transparent 80%);
+            animation: spinBackground 20s linear infinite;
+            z-index: 1;  /* Keep background below header */
+        }
+
+        @keyframes spinBackground {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Navigation styling with hover effects */
+        nav {
+            margin-top: 30px;
+            z-index: 3;  /* Ensure nav is above background */
+            position: relative;
+        }
+
+        nav a {
+            text-decoration: none;
+            margin: 0 15px;
+            color: #f0f8ff;
+            font-weight: bold;
+            font-size: 1.2rem;
+            position: relative;
+            padding: 12px 25px;
+            border-radius: 30px;
+            background: linear-gradient(135deg, #003566, #00509e);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ffd700;
+            transform: translateY(5px);  /* Moving the button down on hover */
+            background: linear-gradient(135deg, #00509e, #003566);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            width: 0;
+            height: 3px;
+            background: #ffd700;
+            transition: width 0.3s ease, left 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+            left: 0;
+        }
+
+        /* Main content area styles */
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        .section {
+            margin-bottom: 60px;
+        }
+
+        .section h2 {
+            font-size: 2.5rem;
+            color: #003566;
+            margin-bottom: 15px;
+            text-align: center;
+            animation: fadeInUp 2s ease-in-out;
+        }
+
+        /* Section animations for dynamic content */
+        .showcase {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            animation: scaleUp 2s ease-in-out;
+        }
+
+        .showcase-item {
+            width: 200px;
+            height: 200px;
+            background: #fff;
+            border-radius: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .showcase-item:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Dynamic animations for showcasing work */
+        @keyframes scaleUp {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Footer styling */
+        .footer {
+            text-align: center;
+            padding: 30px;
+            background: #003566;
+            color: #fff;
+        }
+
+        /* Responsive styling */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.2rem;
+            }
+
+            nav a {
+                font-size: 1.1rem;
+                margin: 0 10px;
+            }
+
+            .section h2 {
+                font-size: 2rem;
+            }
+
+            .showcase {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                padding: 40px 20px;
+            }
+
+            header p {
+                font-size: 1.1rem;
+            }
+
+            nav a {
+                font-size: 1rem;
+                margin: 10px 0;
+            }
+
+            .showcase-item {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Sindhuja's Portfolio</h1>
+        <p>Freelance Video Editor | YouTube Content Creator | MSc in Biotech</p>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section id="home" class="section">
+            <h2>Welcome to My Creative Space</h2>
+            <p>As a passionate video editor, I bring creativity to life with every frame. Explore my world of edits, YouTube content, and dynamic storytelling. Scroll down to dive into my world of work!</p>
+        </section>
+
+        <section class="section">
+            <h2>My Skills</h2>
+            <div class="showcase">
+                <div class="showcase-item">Filmora</div>
+                <div class="showcase-item">DaVinci Resolve</div>
+                <div class="showcase-item">Adobe Premiere Pro</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Featured Projects</h2>
+            <div class="showcase">
+                <div class="showcase-item"><a href="https://drive.google.com/file/d/1rRIzVzZTAOQXVCsX-dMyezElZIS1Rpxt/view?usp=sharing" target="_blank">Project 1</a></div>
+                <div class="showcase-item"><a href="https://drive.google.com/file/d/12n7c6kQax3NO-QVUNis-PosziUaaQqen/view?usp=sharing" target="_blank">Project 2</a></div>
+                <div class="showcase-item"><a href="https://www.youtube.com/@SRFitHealth" target="_blank">Project 3</a></div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <button id="moveToTop">Move to Top</button>
+       
+    </footer>
+    
+    <script>
+        // JavaScript for smooth scroll to top
+        document.getElementById('moveToTop').addEventListener('click', function () {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+    
+    <style>
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: #003566;
+            color: #fff;
+            position: relative;
+        }
+    
+        #moveToTop {
+            background-color: #ffd700; /* Gold color */
+            color: #003566;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-bottom: 10px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+    
+        #moveToTop:hover {
+            background-color: #003566;
+            color: #ffd700;
+        }
+    </style>
+    
+</body>
+</html>
