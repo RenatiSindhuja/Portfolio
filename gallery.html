@@ -181,6 +181,55 @@
               border-left: 4px solid #0078ff;
               padding-left: 10px;
         }
+        .gallery-item video {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+/* Lightbox video scaling */
+.lightbox video {
+  max-width: 90%;
+  max-height: 80vh;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1001;
+}
+
+/* Ensure close button is above everything */
+.lightbox-close {
+  z-index: 2000;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #fff;
+  font-size: 2rem;
+  text-decoration: none;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+}
+
+/* Prevent video blocking the close button clicks */
+.lightbox video {
+  pointer-events: auto;
+}
+
+/* On small screens, make layout mobile-friendly */
+@media (max-width: 600px) {
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+
+  .lightbox video {
+    max-width: 95%;
+    max-height: 70vh;
+  }
+}
     </style>
 </head>
 <body>
@@ -203,19 +252,19 @@
     
             <div class="gallery-grid">
              <a href="#vd1" class="gallery-item video-item">
-                <video src="Images/earth.mp4" muted loop preload="metadata" poster="Images/earth_thumbnail.jpg" width="250px" height="250px" ></video>
+                <video src="Images/earth.mp4" muted loop preload="metadata" poster="Images/earth_thumbnail.jpg"></video>
              </a>
              <a href="#vd2" class="gallery-item video-item">
-                <video src="Images/rockets.mp4" muted loop preload="metadata" poster="Images/rockets_thumbnail.jpg" width="250px" height="250px" ></video>
+                <video src="Images/rockets.mp4" muted loop preload="metadata" poster="Images/rockets_thumbnail.jpg"></video>
              </a>
              <a href="#vd3" class="gallery-item video-item">
-                <video src="Images/Fishes.mp4" muted loop preload="metadata" poster="Images/Fishes_thumbnail.jpg" width="250px" height="250px" ></video>
+                <video src="Images/Fishes.mp4" muted loop preload="metadata" poster="Images/Fishes_thumbnail.jpg"></video>
              </a>
              <a href="#vd4" class="gallery-item video-item">
-                <video src="Images/machines.mp4" muted loop preload="metadata" poster="Images/machines_thumbnail.jpg" width="250px" height="250px" ></video>
+                <video src="Images/machines.mp4" muted loop preload="metadata" poster="Images/machines_thumbnail.jpg"></video>
              </a>
              <a href="#vd5" class="gallery-item video-item">
-                <video src="Images/company name.mp4" muted loop preload="metadata" poster="Images/company name_thumbnail.jpg" width="250px" height="250px" ></video>
+                <video src="Images/company name.mp4" muted loop preload="metadata" poster="Images/company name_thumbnail.jpg"></video>
              </a>
             </div>
 
