@@ -230,6 +230,13 @@
     max-height: 70vh;
   }
 }
+        html {
+  scroll-behavior: auto !important;
+}
+
+:target {
+  scroll-margin-top: 0;
+}
     </style>
 </head>
 <body>
@@ -380,6 +387,19 @@
       video.currentTime = 0; // restart from beginning next time
     });
   });
+document.querySelectorAll('.lightbox-close').forEach(closeBtn => {
+  closeBtn.addEventListener('click', e => {
+    e.preventDefault(); // stop default jump
+    window.history.pushState("", document.title, window.location.pathname + window.location.search);
+    document.querySelectorAll('.lightbox').forEach(box => box.style.display = 'none');
+  });
+});
+document.querySelectorAll('.gallery-item').forEach(item => {
+  item.addEventListener('click', e => {
+    const target = document.querySelector(item.getAttribute('href'));
+    if (target) target.style.display = 'flex';
+  });
+});
     </script>
     
     <style>
